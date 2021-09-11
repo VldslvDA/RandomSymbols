@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "randomsymb.h"
+#include "randomsymbs.h"
 using namespace std;
 
 int main()
@@ -9,4 +9,5 @@ int main()
 	cout << "\n numbers and letters:\n " << randsymbs(5, 20, true, true) << endl;
 	cout << "\n numbers:\n " << randsymbs(5, 20, false, true) << endl;
 	cout << "\n letters:\n " << randsymbs(5, 20, true, false) << endl;
+	system("pause");
 }

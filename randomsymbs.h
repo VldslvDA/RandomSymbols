@@ -2,13 +2,12 @@
 #include <time.h>
 #include <string>
 #include <Windows.h>
-#include "randomsymb.h"
 using namespace std;
 
 // A function that generates random symbols, you just need to write the minimum and maximum number of characters as arguments (you can turn off the numbers or letters generation)
 string randsymbs(int rsmin, int rsmax, bool generatelett, bool generatenums)
 {
-	int symbadded = 0, symbrand, alphabetsymbcount, symbcount = rand() % rsmax + rsmin;
+	int symbadded = 0, symbrand, alphabetsymbcount = 0, symbcount = rand() % rsmax + rsmin;
 	string result, alphabet;
 
 	while (symbcount > rsmax) // fix
