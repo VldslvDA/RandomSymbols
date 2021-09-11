@@ -1,25 +1,12 @@
 #include <iostream>
 #include <string>
+#include "randomsymb.h"
 using namespace std;
-
-string randsymbs(int scmin, int scmax)
-{
-	srand(time(0)); // seed
-
-	int symbcount, symbadded = 0, symbrand;
-	string result, alphabet = "qwertyuiopasdfghjklzxcvbnm123456789";
-	symbcount = rand() % scmax + scmin;
-
-	for (symbadded; symbadded < symbcount; symbadded++)
-	{
-		symbrand = rand() % 35 + 1;
-		result += alphabet[symbrand];
-	}
-
-	return result;
-}
 
 int main()
 {
-	cout << "\n " << randsymbs(1, 20) << endl;
+	srand(time(NULL));
+	cout << "\n numbers and letters:\n " << randsymbs(5, 20, true, true) << endl;
+	cout << "\n numbers:\n " << randsymbs(5, 20, false, true) << endl;
+	cout << "\n letters:\n " << randsymbs(5, 20, true, false) << endl;
 }
